@@ -19,7 +19,7 @@ public class RestEstudiantes {
 	@Path("/saludo")
 	@GET
 	public String saludar(){
-		return "<h1>SALUDOS!!</h1>";
+		return "<h1>HOLA!!</h1>";
 	}
 	
 	
