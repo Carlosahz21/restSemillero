@@ -73,7 +73,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>web</finalName>
+		<finalName>rest</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
