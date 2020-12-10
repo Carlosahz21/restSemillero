@@ -33,9 +33,7 @@ public class RestEstudiantes {
 			serv.insertarEstudiante(estudiante);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			serv.cerrarConexion();
-		}
+		} 
 		
 		System.out.println("Ingresando persona: " + estudiante);
 	}
@@ -46,14 +44,14 @@ public class RestEstudiantes {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Estudiante actualizar(Estudiante estudiante) {
 		ServicioEstudiante serv = new ServicioEstudiante();
+		
 		try {
 			serv.abrirConexion();
 			serv.actualizarEstudiante(estudiante);
 		} catch (BDDException e) {
 			e.printStackTrace();
-		} finally {
-			serv.cerrarConexion();
 		}
+		
 		return estudiante;
 	}
 }
